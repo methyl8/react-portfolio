@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Main from './components/Main';
 
 function App() {
   return (
+  <>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,6 +23,10 @@ function App() {
         </a>
       </header>
     </div>
+    <Navbar />
+    <Main />
+    <Footer />
+    </>
   );
 }
 
