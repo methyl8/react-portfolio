@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar({curPage, setCurPage}) {
 return(
-        <ul className="nav nav-tabs">
+        <ul className="nav nav-tabs bg-dark justify-content-end">
           <li className="nav-item">
             <a
               href="#about"
@@ -33,9 +33,6 @@ return(
           <li className="nav-item">
             <a
               href="#contact"
-              //  TODO: Add a comment explaining what this logic is doing
-              //running handlepagechange function passed in props to change currentpage state
-    
               onClick={() => setCurPage('Contact')}
               className={curPage === 'Contact' ? 'nav-link active' : 'nav-link'}
             >

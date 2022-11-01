@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Footer() {
-return(
-    <ul>
-        <li>footer stuff</li>
-    </ul>
-)
+    const [github, setGithub] = useState('www.github.com/methyl8')
+    return (
+        <>
+            <ul>
+                <li><a href={github} target="_blank" rel="noreferrer">GitHub</a></li>
+            </ul>
+        </>
+    )
 }
 
 export default Footer;

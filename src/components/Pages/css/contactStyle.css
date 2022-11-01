@@ -1,0 +1,15 @@
+.sub-button {
+    width:30%;
+    background: red !important;
+    color: white !important;
+}
+
+.contact-form {
+    width: 75%;
+    background: gray;
+}
+
+h1 {
+    color: red;
+    background: black;
+}
