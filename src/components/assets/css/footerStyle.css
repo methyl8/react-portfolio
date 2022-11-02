@@ -7,5 +7,9 @@
 }
 
 .foot a {
-    color:red
+    color:red;
+}
+
+.foot a:hover {
+    color:white;
 }

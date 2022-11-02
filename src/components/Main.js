@@ -8,6 +8,8 @@ import Resume from "./Pages/Resume";
 function Main() {
     const [curPage, setCurPage] = useState("About")
 
+    //display page based on nav selection
+    //set doc title
     const renderPage = () => {
         if (curPage === "Resume") {
             document.title = "React Portfolio - Resume"

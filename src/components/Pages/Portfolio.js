@@ -1,13 +1,16 @@
 import React from "react";
 import Project from "../Project"
+//import project images
 import playlistProducerImg from "../assets/images/playlistProducer.png";
 import couchPotatoImg from "../assets/images/couchPotato.png"
 import jateImg from "../assets/images/jate.png"
 import weatherImg from "../assets/images/weatherDashboard.png"
+import noteTakerImg from "../assets/images/noteTaker.png"
+import workdayImg from "../assets/images/workdayScheduler.png"
 
 
 function Portfolio() {
-
+//array of project objects
   const projects = [
     {
       name: "Playlist Producer",
@@ -36,16 +39,30 @@ function Portfolio() {
       image: weatherImg,
       gitlink: "https://github.com/methyl8/Challenge-6-Weather-App",
       livelink: "https://methyl8.github.io/Challenge-6-Weather-App/"
+    },
+    {
+      name: "Note Taker",
+      description: "A note-taking application that allows entry and deletion of personal notes using an Express JS server.",
+      image: noteTakerImg,
+      gitlink: "https://github.com/methyl8/Challenge-11-Note-Taker",
+      livelink: "https://still-meadow-45845.herokuapp.com/"
+
+    },
+    {
+      name: "Workday Scheduler",
+      description: "An hourly calendar for the current work day.",
+      image: workdayImg,
+      gitlink: "https://github.com/methyl8/Challenge-5-Workday-Scheduler",
+      livelink: "https://methyl8.github.io/Challenge-5-Workday-Scheduler/"
+
     }
 
   ]
 return(
 <>
 <h1 className="text-center">Portfolio</h1>
-<div className="row card-group">
-<div className="card-group">
+<div className="row">
   {projects.map((project) => <Project {...project} />)}
-</div>
 </div>
 </>
 )

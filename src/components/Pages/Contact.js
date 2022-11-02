@@ -8,6 +8,7 @@ function Contact() {
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
 
+    //change state on input
     const handleInputChange = (e) => {
         const element = e.target.name;
         const value = e.target.value;
@@ -22,7 +23,7 @@ function Contact() {
             setMessage(value)
         }
     }
-
+//check for empty fields and invalid email on exiting field if nothing was changed
     const handleBlur = (e) => {
         if (contactName === '') {
             setErrorMessage('Your name must not be blank');
@@ -38,7 +39,8 @@ function Contact() {
         }
         return
     }
-
+//validate input on submit
+//input values go nowhere 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (contactName === '') {
