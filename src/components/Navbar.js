@@ -1,9 +1,13 @@
 import React from "react";
+import "./assets/css/navStyle.css"
 
 function Navbar({curPage, setCurPage}) {
 return(
-        <ul className="nav nav-tabs bg-dark justify-content-end">
-          <li className="nav-item">
+  <>
+  <nav className="nav nav-colors">
+    <div className="mx-5 justify-content-start fs-1">David Byrd</div>
+    <ul className="nav nav-tabs nav-colors justify-content-end">
+          <li className="nav-item nav-colors">
             <a
               href="#about"
               onClick={() => setCurPage('About')}
@@ -12,7 +16,7 @@ return(
               About
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-colors">
             <a
               href="#portfolio"
               onClick={() => setCurPage('Portfolio')}
@@ -21,7 +25,7 @@ return(
               Portfolio
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-colors">
             <a
               href="#resume"
               onClick={() => setCurPage('Resume')}
@@ -30,7 +34,7 @@ return(
               Resume
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-colors">
             <a
               href="#contact"
               onClick={() => setCurPage('Contact')}
@@ -40,6 +44,8 @@ return(
             </a>
           </li>
         </ul>
+</nav>
+ </>
       );
     }
     

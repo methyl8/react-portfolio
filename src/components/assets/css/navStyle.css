@@ -1,0 +1,6 @@
+.nav-colors {
+    background: black;
+    color: red;
+    --bs-nav-link-color: red;
+    --bs-nav-link-hover-color: red;
+}

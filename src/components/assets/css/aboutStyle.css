@@ -1,0 +1,18 @@
+.main-content {
+    display: flex;
+    background: gray;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+h1 {
+    color: red;
+    background: black;
+}
+
+about-img {
+    /* float doesn't work with flex? */
+    float: left;
+    height: 150px;
+    width: 150px;
+}

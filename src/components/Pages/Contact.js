@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../utils/helpers";
-import "./css/contactStyle.css"
+import "../assets/css/contactStyle.css"
 
 function Contact() {
     const [contactName, setContactName] = useState('')
@@ -21,6 +21,22 @@ function Contact() {
         else if (element === "message") {
             setMessage(value)
         }
+    }
+
+    const handleBlur = (e) => {
+        if (contactName === '') {
+            setErrorMessage('Your name must not be blank');
+            return;
+        }
+        else if (message === '') {
+            setErrorMessage('Your message must not be blank');
+            return;
+        }
+        else if (!validateEmail(email)) {
+            setErrorMessage('Email address is invalid')
+            return;
+        }
+        return
     }
 
     const handleSubmit = (e) => {
@@ -52,7 +68,7 @@ function Contact() {
             <form className="contact-form justify-content-center">
                 <div className="mb-3 text-white p-4">
                     <label className="form-label">Name</label>
-                    <input type="text" className="form-control" placeholder="Enter your name" name="contactName" value={contactName} onChange={handleInputChange}></input>
+                    <input type="text" className="form-control" placeholder="Enter your name" name="contactName" value={contactName} onBlur={handleBlur} onChange={handleInputChange}></input>
                 </div>
                 <div className="mb-3 text-white p-4">
                     <label className="form-label">Email</label>
@@ -66,7 +82,7 @@ function Contact() {
             </form>
             {errorMessage && (
                 <div>
-                    <p className="error-text">{errorMessage}</p>
+                    <p className="error-text fw-bold fst-italic fs-2" style={{color:"red"}}>{errorMessage}</p>
                 </div>
             )}
         </>

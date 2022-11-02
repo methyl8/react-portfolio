@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import About from "./Pages/About";
-import Portfolio from "./Pages/Portfoliio";
+import Portfolio from "./Pages/Portfolio";
 import Contact from "./Pages/Contact";
 import Resume from "./Pages/Resume";
 

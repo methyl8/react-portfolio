@@ -1,0 +1,11 @@
+.foot {
+    position: fixed;
+    bottom: 0vh;
+    right: 0px;
+    width: 100%;
+    background-color: black;
+}
+
+.foot a {
+    color:red
+}

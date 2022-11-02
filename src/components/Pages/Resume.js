@@ -1,4 +1,6 @@
 import React from "react";
+import "../assets/css/resumeStyle.css"
+import resume from "../assets/download/download.txt"
 
 const styles = {
     nobullet: {
@@ -8,7 +10,7 @@ const styles = {
 function Resume() {
 return(
     <>
-    <h1>Resume</h1>
+    <h1 className="text-center">Resume</h1>
     <p className="text-center">This is where resume information would go</p>
     <p className="text-center">if I wanted to put my personal details online</p>
     <ul style={styles.nobullet}>
@@ -26,7 +28,17 @@ return(
                 <li>Northwestern University Coding Bootcamp August - November 2022</li>
                 <li>Previous Education</li>
             </ul>
+            <li><h3>Proficiencies</h3></li>
+            <ul>
+                <li>HTML</li>
+                <li>Javascript</li>
+                <li>CSS</li>
+                <li>SQL</li>
+                <li>Technologies include Node.js, React, MongoDB</li>
+            </ul>
+
     </ul>
+    <a className="btn btn-danger" href={resume} download="resume.txt">Download</a>
     </>
 )
 }
