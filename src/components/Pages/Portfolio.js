@@ -13,6 +13,7 @@ function Portfolio() {
 //array of project objects
   const projects = [
     {
+      id: 1,
       name: "Playlist Producer",
       description: "Gets popular playlists using the Napster API based on user-selected moods, represented by emojis.",
       image: playlistProducerImg,
@@ -20,6 +21,7 @@ function Portfolio() {
       livelink: "https://jessicamorse23.github.io/Playlist-Producer"
     },
     {
+      id: 2,
       name: "Couch Potato",
       description: "Allows user to save favorite movies from a list of the top 1000 movies in IMDB.  With login, allows search by genre and title.  Without login it displays a random selection of 10 movies.",
       image: couchPotatoImg,
@@ -27,6 +29,7 @@ function Portfolio() {
       livelink: "https://infinite-river-93616.herokuapp.com/"
     },
     {
+      id: 3,
       name: "Just Another Text Editor",
       description: "Modify starter code to deploy a Progressive Web App that allows text entry.",
       image: jateImg,
@@ -34,6 +37,7 @@ function Portfolio() {
       livelink: ""
     },
     {
+      id: 4,
       name: "Weather Dashboard",
       description: "Use OpenWeather API to get the weather for a searched US city destination.  Previous searches are stored in local storage.",
       image: weatherImg,
@@ -41,6 +45,7 @@ function Portfolio() {
       livelink: "https://methyl8.github.io/Challenge-6-Weather-App/"
     },
     {
+      id: 5,
       name: "Note Taker",
       description: "A note-taking application that allows entry and deletion of personal notes using an Express JS server.",
       image: noteTakerImg,
@@ -49,6 +54,7 @@ function Portfolio() {
 
     },
     {
+      id: 6,
       name: "Workday Scheduler",
       description: "An hourly calendar for the current work day.",
       image: workdayImg,
@@ -62,7 +68,7 @@ return(
 <>
 <h1 className="text-center">Portfolio</h1>
 <div className="row">
-  {projects.map((project) => <Project {...project} />)}
+  {projects.map((project) => <Project key={project.id} {...project} />)}
 </div>
 </>
 )

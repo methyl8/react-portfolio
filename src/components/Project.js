@@ -4,7 +4,7 @@ function Project(props) {
     return (
         <>
                 <div className="card col-lg-3 col-md-6 col-sm-12 m-2 border-danger">
-                    <img src={props.image} className="card-img-top" style={{ width: "18rem;" }} alt={props.name} />
+                    <img src={props.image} className="card-img-top" style={{ width: "18rem" }} alt={props.name} />
                     <div className="card-body">
                         <h5 className="card-title">{props.name}</h5>
                         <p className="card-text">{props.description}</p>
