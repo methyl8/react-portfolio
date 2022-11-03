@@ -4,8 +4,6 @@ import "./assets/css/navStyle.css"
 function Navbar({curPage, setCurPage}) {
 return(
   <>
-  <nav className="nav nav-colors">
-    <div className="mx-5 justify-content-start fs-1">David Byrd</div>
     <ul className="nav nav-tabs nav-colors justify-content-end">
           <li className="nav-item nav-colors">
             <a
@@ -44,7 +42,6 @@ return(
             </a>
           </li>
         </ul>
-</nav>
  </>
       );
     }

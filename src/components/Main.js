@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
+import Header from "./Header"
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
 import Contact from "./Pages/Contact";
@@ -31,7 +31,7 @@ function Main() {
 
     return (
         <>
-            <Navbar curPage={curPage} setCurPage={setCurPage} />
+            <Header curPage={curPage} setCurPage={setCurPage} />
             {renderPage()}
         </>
     )
